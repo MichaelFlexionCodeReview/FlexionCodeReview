@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<title>Fahrenheit to Celcius Temperature Converter</title>
+<body bgcolor="#BBFFFF">
+    <h2 style="text-align: center;">Temperature Converter</h2>
+    <div style="padding: 20px; color:brown;">
+        
+        <b><p style="font-style: italic;">Type a value in the Fahrenheit field to convert the value to Rankie:</p></b>
+
+        <p>
+        <label>Fahrenheit</label>
+        <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+        </p>
+
+        <!--<p>Celcius: <span id="outputCelcius"></span></p>-->
+        <p>Rankie: <span id="outputRankie"></span></p>
+        <p>Output: <span id="output"></span></p>
+    </div>
+
+
+
+<script>
+    function temperatureConverter(valNum) {
+        valNum = parseFloat(valNum);
+        //document.getElementById("outputCelcius").innerHTML=(valNum-32)/1.8;
+        document.getElementById("outputRankie").innerHTML=(valNum+459.7);
+        //document.getElementById("outputFahrenheit").innerHTML=((valNum-273.15)*1.8)+32;
+        
+        let result1 = document.getElementById("outputRankie").innerHTML=(valNum+459.7)
+        if(result1 == 543.9){
+        document.getElementById("output").innerHTML="Correct"
+        }
+        else{
+        document.getElementById("output").innerHTML="Incorrect"
+        }
+
+    }
+
+</script>
+
+</body>
+</html>
