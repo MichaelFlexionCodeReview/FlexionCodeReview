@@ -12,7 +12,7 @@
         <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
         </p>
 
-        <!--<p>Celcius: <span id="outputCelcius"></span></p>-->
+
         <p>Rankie: <span id="outputRankie"></span></p>
         <p>Output: <span id="output"></span></p>
     </div>
@@ -22,10 +22,8 @@
 <script>
     function temperatureConverter(valNum) {
         valNum = parseFloat(valNum);
-        //document.getElementById("outputCelcius").innerHTML=(valNum-32)/1.8;
         document.getElementById("outputRankie").innerHTML=(valNum+459.7);
-        //document.getElementById("outputFahrenheit").innerHTML=((valNum-273.15)*1.8)+32;
-        
+    
         let result1 = document.getElementById("outputRankie").innerHTML=(valNum+459.7)
         if(result1 == 543.9){
         document.getElementById("output").innerHTML="Correct"
